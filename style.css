@@ -66,11 +66,13 @@ select {
 
 /* actual stylings */
 
+/* focus styles for better accessibility when keyboard-navigating */
 :focus-visible {
   outline: 2px solid var(--clr-accent);
   outline-offset: 2px;
 }
 
+/* form container styling */
 .form-container {
   background-color: var(--clr-surface); /* surface color */
   padding: var(--gap-600); /* spacing inside the container */
@@ -78,6 +80,7 @@ select {
   box-shadow: var(--shadow-card);
 }
 
+/* global container to center stuff on the page */
 .container {
   display: grid; /* easiest center the form open button etc */
   justify-content: center;
