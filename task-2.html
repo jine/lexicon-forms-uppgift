@@ -9,7 +9,7 @@
 <body>
 <main class="container">
     <h1>Bordsbokning</h1>
-    <button id="open-modal" onclick="document.getElementById('booking-dialog').showModal()">Öppna bokningsformulär</button>
+    <button class="btn btn-primary" id="open-modal" onclick="document.getElementById('booking-dialog').showModal()">Öppna bokningsformulär</button>
 
     <dialog id="booking-dialog" class="booking-dialog">
         <form action="#booking-result" method="POST">
@@ -97,8 +97,8 @@
 
             <!-- Form buttons -->
             <section class="form-buttons">
-                <button class="btn-cancel" value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
-                <input type="submit" value="Boka bord">
+                <button class="btn btn-cancel" value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
+                <input class="btn btn-primary" type="submit" value="Boka bord">
             </section>
         </form>
     </dialog>

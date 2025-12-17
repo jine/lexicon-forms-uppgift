@@ -96,17 +96,21 @@ label {
   margin-block-start: 0.4rem;
 }
 
-/* cancel and submit buttons */
-button, input[type="submit"] {
+/* btn-styling */
+.btn {
   cursor: pointer;
-  background-color: var(--clr-accent);
-  color: var(--clr-surface);
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: var(--br-400);
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
   margin-block-start: 0.5rem;
+}
+
+/* blue button */
+.btn-primary {  
+  background-color: var(--clr-accent);
+  color: var(--clr-surface);
 
   &:hover {
     background-color: var(--clr-accent-hover);
@@ -116,6 +120,11 @@ button, input[type="submit"] {
 /* cancel button variant */
 .btn-cancel {
   background-color: var(--clr-neutral-400);
+  color: var(--clr-surface);
+
+  &:hover {
+    background-color: var(--clr-neutral-800);
+  }
 }
 
 input[type="text"],
