@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jim Nelin | Uppgift 2</title>
+</head>
+<body>
+    <h1>Bordsbokning</h1>
+    <button id="open-modal" onclick="document.getElementById('booking-dialog').showModal()">Öppna bokningsformulär</button>
+
+    <dialog id="booking-dialog" class="booking-dialog">
+        <form action="#booking-result" method="POST">
+            <h2>Boka bord</h2>
+
+            <!-- Name and info for booking -->
+            <section class="form-info">
+                <div>
+
+                    <label for="name">Namn för bokning:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="date">Datum för bokning:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </section>
+
+            <!-- Fieldset with Radio buttons -->
+            <section class="form-preferences">
+                <fieldset>
+                    <legend>Tid för bokning</legend>
+                    <div>
+                        <input type="radio" id="lunch" name="session" value="lunch">
+                        <label for="lunch">Lunch (11:00 - 14:00)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dinner" name="session" value="dinner">
+                        <label for="dinner">Middag (17:00 - 22:00)</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Checkboxes -->
+            <section class="form-preferences">
+                <fieldset>
+                    <legend>Kostpreferenser</legend>
+                    <div>
+                        <input type="checkbox" id="gluten" name="diet" value="gluten">
+                        <label for="gluten">Glutenfritt</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="lactose" name="diet" value="lactose">
+                        <label for="lactose">Laktosfritt</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="vegan" name="diet" value="vegan">
+                        <label for="vegan">Veganskt</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Range slider with datalist -->
+            <section class="form-partysize">
+                <label for="party-size">Antal personer (1-10):</label>
+                <input type="range" id="party-size" name="party-size" min="1" max="10" step="1" list="party-markers">
+                <datalist id="party-markers" class="party-markers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+            </section>
+
+            <!-- Input with aria-describedby -->
+            <section class="form-requests">
+                <label for="special-requests">Andra önskemål:</label>
+                <input type="text" id="special-requests" name="special-requests" aria-describedby="help-text">
+                <small id="help-text" class="help">T.ex. fönsterbord, barnstol eller allergier som ej listats ovan.</small>
+            </section>
+
+            <!-- Form buttons -->
+            <section class="form-buttons">
+                <button value="cancel">Avbryt</button>
+                <button value="confirm" autofocus>Boka</button>
+            </section>
+        </form>
+    </dialog>
+</body>
+</html>
