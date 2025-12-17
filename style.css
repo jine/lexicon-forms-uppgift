@@ -54,9 +54,6 @@ body {
   background-color: var(--clr-body-bg);
   color: var(--clr-text-main);
   line-height: 1.5;
-  display: grid;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 input,
@@ -79,6 +76,12 @@ select {
   padding: var(--gap-600); /* spacing inside the container */
   border-radius: var(--br-400);
   box-shadow: var(--shadow-card);
+}
+
+.container {
+  display: grid; /* easiest center the form open button etc */
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* some default label & input styling */
