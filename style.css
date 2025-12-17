@@ -52,12 +52,6 @@ body {
   background-color: var(--clr-body-bg);
   color: var(--clr-text-main);
   line-height: 1.5;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: var(--gap-600);
 }
 
 input,
@@ -71,4 +65,43 @@ select {
 :focus-visible {
   outline: 2px solid var(--clr-accent);
   outline-offset: 2px;
+}
+
+.form-container {
+  background-color: var(--clr-surface);
+  padding: var(--gap-600);
+  border-radius: var(--br-400);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10rem auto;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--gap-200);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-400);
+  margin-block-start: 0.4rem;
+}
+
+textarea {
+  width: 40ch;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+  background-color: var(--clr-accent);
+  color: var(--clr-surface);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--br-400);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-600);
+  margin-block-start: 0.5rem;
 }
