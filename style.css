@@ -116,10 +116,6 @@ button, input[type="submit"] {
 /* cancel button variant */
 .btn-cancel {
   background-color: var(--clr-neutral-400);
-  
-  &:hover {
-    background-color: var(--clr-neutral-300);
-  }
 }
 
 input[type="text"],
