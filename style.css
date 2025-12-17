@@ -41,6 +41,7 @@
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* basic resets ... */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,6 +53,9 @@ body {
   background-color: var(--clr-body-bg);
   color: var(--clr-text-main);
   line-height: 1.5;
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 input,
@@ -61,6 +65,8 @@ select {
   font: inherit;
   color: inherit;
 }
+
+/* actual stylings */
 
 :focus-visible {
   outline: 2px solid var(--clr-accent);
@@ -78,9 +84,9 @@ select {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 10rem auto;
 }
 
+/* some default label & input styling */
 label {
   display: block;
   margin-bottom: var(--gap-200);
@@ -89,7 +95,6 @@ label {
   margin-block-start: 0.4rem;
 }
 
-input[type="submit"],
 button {
   cursor: pointer;
   background-color: var(--clr-accent);
@@ -100,4 +105,92 @@ button {
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
   margin-block-start: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="range"],
+input[type="tel"],
+textarea,
+select {
+  padding: 0.4rem;
+  border: 1px solid var(--clr-neutral-800);
+  font-size: var(--fs-400);
+  width: 80%;
+}
+
+.booking-dialog {
+  border: 0; /* Remove default border */
+  border-radius: var(--br-400); /* Rounded corners */
+  padding-inline: 1rem; /* Horizontal padding */
+  padding-block: 1rem; /* Vertical padding */
+}
+
+/* form sections */
+section[class^="form-"] {
+  margin-block-end: var(--gap-400);
+
+  /* each label & field pair inside a section */
+  div {
+    margin-inline: var(--gap-200); /* spacing between inline-block elements */
+    margin-block: var(--gap-200); /* spacing between rows */
+    
+  }
+
+  /* make all children inside fieldset (label & radio buttons etc) into flexboxes */
+  fieldset * {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-200);
+  }
+}
+
+/* help text style */
+.help {
+  font-size: var(--fs-200);
+  color: var(--clr-text-muted);
+  display: block;
+}
+
+
+
+
+
+/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog */
+
+/* Closed state of the dialog   */
+dialog {
+  opacity: 0;
+}
+
+/* Open state of the dialog  */
+dialog:open {
+  opacity: 1;
+  margin: 10rem auto;
+}
+
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect, as the specificity is the same */
+@starting-style {
+  dialog:open {
+    opacity: 0;
+  }
+}
+
+/* Closed backdrop styles */
+dialog::backdrop {
+  background-color: transparent;
+}
+
+/* Open state backdrop styles  */
+dialog:open::backdrop {
+  background-color: rgb(0 0 0 / 65%);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+@starting-style {
+  dialog:open::backdrop {
+    background-color: transparent;
+  }
 }
