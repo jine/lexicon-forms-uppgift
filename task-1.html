@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="form-container">
-    <form action="#result-1" method="get">
+    <form action="#result-1" method="get" onsubmit="alert('Formuläret har skickats!');">
         <div>
             <label for="name">Namn:</label>
             <input type="text" id="name" name="name" autocomplete="name" required>
@@ -28,7 +28,7 @@
         </div>
         <div>
             <label for="message">Meddelande:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <button type="submit">Skicka</button>
     </form>
