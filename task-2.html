@@ -20,7 +20,7 @@
                 <div>
 
                     <label for="name">Namn för bokning</label>
-                    <input type="text" id="name" name="name" required placeholder="Ditt fullständiga namn">
+                    <input type="text" id="name" name="name" required autofocus placeholder="Ditt fullständiga namn">
                     <small class="help">Ange det fullständiga namnet för bokningen.</small>
                 </div>
                 <div>
@@ -97,7 +97,7 @@
             <!-- Form buttons -->
             <section class="form-buttons">
                 <button value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
-                <button value="confirm" autofocus>Boka</button>
+                <button value="confirm">Boka</button>
             </section>
         </form>
     </dialog>
