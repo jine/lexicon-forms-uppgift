@@ -26,7 +26,7 @@
                 </div>
                 <div>
                     <label for="phone">Telefonnummer</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="070-012 34 56">
+                    <input type="tel" id="phone" name="phone" required>
                     <small class="help">Ange ditt telefonnummer.</small>
                 </div>
                 <div>
@@ -97,8 +97,8 @@
 
             <!-- Form buttons -->
             <section class="form-buttons">
-                <button value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
-                <button value="confirm">Boka</button>
+                <button class="btn-cancel" value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
+                <input type="submit" value="Boka bord">
             </section>
         </form>
     </dialog>

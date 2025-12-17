@@ -96,7 +96,8 @@ label {
   margin-block-start: 0.4rem;
 }
 
-button {
+/* cancel and submit buttons */
+button, input[type="submit"] {
   cursor: pointer;
   background-color: var(--clr-accent);
   color: var(--clr-surface);
@@ -106,6 +107,19 @@ button {
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
   margin-block-start: 0.5rem;
+
+  &:hover {
+    background-color: var(--clr-accent-hover);
+  }
+}
+
+/* cancel button variant */
+.btn-cancel {
+  background-color: var(--clr-neutral-400);
+  
+  &:hover {
+    background-color: var(--clr-neutral-300);
+  }
 }
 
 input[type="text"],
