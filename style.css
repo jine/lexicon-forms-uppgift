@@ -160,7 +160,7 @@ section[class^="form-"] {
 /* help text style */
 .help {
   font-size: var(--fs-200);
-  color: var(--clr-text-muted);
+  color: var(--clr-neutral-800);
   display: block; /* ensure it starts on a new line */
 }
 
