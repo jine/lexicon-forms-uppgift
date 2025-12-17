@@ -13,6 +13,7 @@
     <dialog id="booking-dialog" class="booking-dialog">
         <form action="#booking-result" method="POST">
             <h2>Boka bord</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure impedit modi, aliquam enim deleniti praesentium nobis, a quaerat illo aliquid fugit sapiente vitae, voluptatem itaque officiis molestiae voluptatum dolore delectus.</p>
 
             <!-- Name and info for booking -->
             <section class="form-info">
@@ -92,7 +93,7 @@
 
             <!-- Form buttons -->
             <section class="form-buttons">
-                <button value="cancel">Avbryt</button>
+                <button value="cancel" onclick="document.getElementById('booking-dialog').close()">Avbryt</button>
                 <button value="confirm" autofocus>Boka</button>
             </section>
         </form>

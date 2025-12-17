@@ -20,7 +20,8 @@
 
   --clr-accent: var(--clr-primary-400);
   --clr-accent-hover: var(--clr-primary-600);
-  --font-base: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  /*--font-base: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;*/
+  --font-base: sans-serif;
 
   --fw-400: 400;
   --fw-600: 600;
@@ -74,16 +75,10 @@ select {
 }
 
 .form-container {
-  background-color: var(--clr-surface);
-  padding: var(--gap-600);
+  background-color: var(--clr-surface); /* surface color */
+  padding: var(--gap-600); /* spacing inside the container */
   border-radius: var(--br-400);
   box-shadow: var(--shadow-card);
-  width: 100%;
-  max-width: 500px;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 /* some default label & input styling */
@@ -116,25 +111,42 @@ select {
   padding: 0.4rem;
   border: 1px solid var(--clr-neutral-800);
   font-size: var(--fs-400);
-  width: 80%;
+  border-radius: var(--br-400);
+  width: 80%; /* default width for inputs */
 }
+
 
 .booking-dialog {
   border: 0; /* Remove default border */
-  border-radius: var(--br-400); /* Rounded corners */
-  padding-inline: 1rem; /* Horizontal padding */
-  padding-block: 1rem; /* Vertical padding */
+  border-radius: var(--br-400); /* rounded corners */
+  padding: 1rem; /* padding inside the dialog */
+  margin: auto; /* center the dialog vertically & horizontally */
+
+  /* limit paragraph width for better readability */
+  p {
+    max-width: 50ch;
+    padding-block-end: 0.5rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-block-end: 0.5rem;
+  }
 }
 
 /* form sections */
 section[class^="form-"] {
-  margin-block-end: var(--gap-400);
+  margin-block-end: var(--gap-400); /* spacing between sections */
+  padding-inline: 0.5rem;
+  
+  fieldset {
+    padding-inline: 1rem;
+  }
 
   /* each label & field pair inside a section */
   div {
-    margin-inline: var(--gap-200); /* spacing between inline-block elements */
     margin-block: var(--gap-200); /* spacing between rows */
-    
   }
 
   /* make all children inside fieldset (label & radio buttons etc) into flexboxes */
@@ -149,9 +161,21 @@ section[class^="form-"] {
 .help {
   font-size: var(--fs-200);
   color: var(--clr-text-muted);
-  display: block;
+  display: block; /* ensure it starts on a new line */
 }
 
+/* datalist styling for range slider labels */
+.form-partysize datalist {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Matches the input width */
+  
+  /* font style for labels */
+  option {
+    font-size: var(--fs-200);
+    padding: 0;
+  }
+}
 
 
 
@@ -166,7 +190,6 @@ dialog {
 /* Open state of the dialog  */
 dialog:open {
   opacity: 1;
-  margin: 10rem auto;
 }
 
 /* Before open state  */
@@ -194,3 +217,4 @@ because the nesting selector cannot represent pseudo-elements. */
     background-color: transparent;
   }
 }
+
