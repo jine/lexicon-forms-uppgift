@@ -19,16 +19,19 @@
             <section class="form-info">
                 <div>
 
-                    <label for="name">Namn för bokning:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Namn för bokning</label>
+                    <input type="text" id="name" name="name" required placeholder="Ditt fullständiga namn">
+                    <small class="help">Ange det fullständiga namnet för bokningen.</small>
                 </div>
                 <div>
-                    <label for="phone">Telefonnummer:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">Telefonnummer</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="070-012 34 56">
+                    <small class="help">Ange ditt telefonnummer.</small>
                 </div>
                 <div>
-                    <label for="date">Datum för bokning:</label>
+                    <label for="date">Datum för bokning</label>
                     <input type="date" id="date" name="date" required>
+                    <small class="help">Välj vilket datum du vill boka bordet.</small>
                 </div>
             </section>
 
@@ -68,7 +71,7 @@
 
             <!-- Range slider with datalist -->
             <section class="form-partysize">
-                <label for="party-size">Antal personer (1-10):</label>
+                <label for="party-size">Antal personer (1-10)</label>
                 <input type="range" id="party-size" name="party-size" min="1" max="10" step="1" list="party-markers">
                 <datalist id="party-markers" class="party-markers">
                     <option value="1">1</option>
@@ -86,9 +89,9 @@
 
             <!-- Input with aria-describedby -->
             <section class="form-requests">
-                <label for="special-requests">Andra önskemål:</label>
+                <label for="special-requests">Andra önskemål</label>
                 <input type="text" id="special-requests" name="special-requests" aria-describedby="help-text">
-                <small id="help-text" class="help">T.ex. fönsterbord, barnstol eller allergier som ej listats ovan.</small>
+                <small id="help-text" class="help">T.ex. fönsterbord, barnstol eller eventuella allergier.</small>
             </section>
 
             <!-- Form buttons -->
